@@ -12,9 +12,10 @@ import { AnimatedIcon } from "@/components/animated-icon"
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
     onToggle: () => void;
+    onLinkClick?: () => void;
 }
 
-export function Sidebar({ className, onToggle }: SidebarProps) {
+export function Sidebar({ className, onToggle, onLinkClick }: SidebarProps) {
   const pathname = usePathname()
 
   return (
@@ -32,7 +33,7 @@ export function Sidebar({ className, onToggle }: SidebarProps) {
             </div>
           
           <div className="space-y-1">
-            <Button variant={pathname === "/" ? "secondary" : "ghost"} className="w-full justify-start" asChild>
+            <Button variant={pathname === "/" ? "secondary" : "ghost"} className="w-full justify-start" asChild onClick={onLinkClick}>
               <Link href="/">
                 <div className="mr-2">
                     <AnimatedIcon icon={LayoutDashboard} animation="pulse" className="p-0" iconClassName="h-4 w-4" />
@@ -46,6 +47,7 @@ export function Sidebar({ className, onToggle }: SidebarProps) {
                     variant={pathname === item.href ? "secondary" : "ghost"}
                     className="w-full justify-start"
                     asChild
+                    onClick={onLinkClick}
                 >
                     <Link href={item.href}>
                          <div className="mr-2">
