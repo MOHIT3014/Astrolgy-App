@@ -1,34 +1,28 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import * as React from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
+import { useLanguage } from "@/store/use-language";
+import { useTranslations } from "@/hooks/use-translations";
 
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
-  const name =
-    "ॐ कर्पूर गौरं करुणावतारं संसारसारम् भुजगेन्द्रहारम् । सदावसंतं हृदयारविंदे भवं भवानीसहितं नमामि ॥";
-  const [loopNum, setLoopNum] = useState(0);
+  const { language } = useLanguage();
+  const t = useTranslations();
 
-  useEffect(() => {
-    // Total duration of typing ~ 1s (19 chars * 0.05). Pause for 2s. Total 3s.
-    const timeout = setTimeout(() => {
-      setLoopNum((prev) => prev + 1);
-    }, 10000);
-    return () => clearTimeout(timeout);
-  }, [loopNum]);
   return (
     <div className="flex min-h-screen flex-col">
       {/* Sloka Sub-header */}
-      <div className="w-full bg-background border-b py-2 text-center">
+      <div className="w-full bg-background border-b py-2 text-center min-h-[50px] flex items-center justify-center">
         <p className="font-rozha text-sm md:text-base text-primary/90 leading-relaxed tracking-wide md:p-0 p-2">
-          {name.split("").map((char, index) => (
+          {t.sloka.text.split("").map((char, index) => (
             <motion.span
-              key={`${index}-${loopNum}`}
+              key={`${index}-${language}`} // Re-animate when language changes
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
                 duration: 0,
-                delay: index * 0.06,
+                delay: index * 0.03, // Slightly faster typing for responsiveness
               }}
             >
               {char}
