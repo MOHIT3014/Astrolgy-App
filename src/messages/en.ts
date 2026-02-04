@@ -36,6 +36,28 @@ export const en = {
     aquarius: "Aquarius",
     pisces: "Pisces",
   },
+  services: {
+    title: "Sacred Services",
+    subtitle: "Personalized spiritual guidance empowering clarity, healing, growth, and purpose on your unique inner journey life.",
+    bookSlot: "Book Your Slot",
+    showMore: "Show More",
+    birthChart: {
+      title: "Birth Chart Analysis",
+      description: "Deep dive into your personality, destiny, and life path through your natal chart.",
+    },
+    varshfal: {
+      title: "Varshfal Analysis",
+      description: "Annual forecast to guide your year ahead with precision and foresight.",
+    },
+    matchMaking: {
+      title: "Match Making",
+      description: "Ensure marital harmony with detailed Guna Milan and compatibility checks.",
+    },
+    janampatri: {
+      title: "Janampatri Analysis",
+      description: "Comprehensive life reading covering health, wealth, career, and relationships.",
+    }
+  },
   sloka: {
     text: "I bow to Shiva, who is as white as camphor, the incarnation of compassion, garlanded with the serpent king. I bow to the one who resides in my heart forever with Bhavani."
   }

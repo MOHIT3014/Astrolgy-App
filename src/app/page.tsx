@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useTranslations } from "@/hooks/use-translations";
 import { useLanguage } from "@/store/use-language";
 import { ZodiacSigns } from "@/components/zodiac-signs";
+import { SacredServices } from "@/components/sacred-services";
 
 export default function Home() {
   const t = useTranslations();
@@ -146,6 +147,7 @@ export default function Home() {
       </div>
 
       <ZodiacSigns />
+      <SacredServices />
     </div>
   );
 }

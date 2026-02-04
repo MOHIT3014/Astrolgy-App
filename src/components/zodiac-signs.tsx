@@ -141,7 +141,7 @@ export function ZodiacSigns() {
   ];
 
   return (
-    <section className="py-20 md:py-32 w-full bg-background relative overflow-hidden">
+    <section className=" md:py-32 w-full bg-background relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10" />
 
@@ -167,7 +167,7 @@ export function ZodiacSigns() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center">
+        <div className="flex md:grid md:grid-cols-3 lg:grid-cols-6 gap-6 md:justify-items-center overflow-x-auto md:overflow-visible pb-8 md:pb-0 px-4 md:px-0 snap-x snap-mandatory scrollbar-hide">
           {zodiacKeys.map((sign, index) => {
             const iconData = zodiacIcons.find((icon) => icon.id === sign);
 
@@ -179,7 +179,7 @@ export function ZodiacSigns() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="group relative w-full aspect-square flex flex-col items-center justify-center p-4 rounded-3xl bg-card/50 border border-primary/10 hover:border-primary/40 backdrop-blur-sm transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-primary/10 cursor-pointer"
+                className="group relative min-w-[140px] md:min-w-0 w-full aspect-square flex flex-col items-center justify-center p-4 rounded-3xl bg-transparent border border-primary/10 hover:border-primary/40 backdrop-blur-sm transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-primary/10 cursor-pointer snap-center"
               >
                 {/* Icon Container */}
                 <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-3 rounded-2xl bg-linear-to-br from-primary to-purple-600 text-white shadow-lg group-hover:shadow-primary/40 transition-shadow duration-300">
