@@ -65,6 +65,24 @@ export const en = {
     confirmBooking: "Confirm Booking",
     timeSlots: ["10:00 AM", "11:30 AM", "2:00 PM", "3:30 PM", "5:00 PM", "6:30 PM"]
   },
+  testimonials: {
+    title: "Blessings Received",
+    subtitle: "Words from those who have walked this path",
+    reviews: [
+      {
+        text: "The birth chart reading was incredibly accurate. Panditji's insights helped me navigate a difficult career transition.",
+        author: "Priya Sharma",
+      },
+      {
+        text: "The Pooja ceremony brought peace to our home. We felt the divine energy immediately. Highly recommended!",
+        author: "Rajesh Patel",
+      },
+      {
+        text: "Professional, compassionate, and deeply knowledgeable. The consultation exceeded all my expectations.",
+        author: "Meera Iyer",
+      },
+    ],
+  },
   sloka: {
     text: "I bow to Shiva, who is as white as camphor, the incarnation of compassion, garlanded with the serpent king. I bow to the one who resides in my heart forever with Bhavani."
   }
