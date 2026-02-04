@@ -39,7 +39,7 @@ export function SacredSessionBooking() {
               <span key={i}>
                 {part}
                 {i < arr.length - 1 && (
-                  <span className="text-amber-400"> Sacred Session</span>
+                  <span className="text-primary"> Sacred Session</span>
                 )}
               </span>
             ))}
@@ -61,28 +61,48 @@ export function SacredSessionBooking() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative bg-[#0F1116] border border-white/5 rounded-3xl p-6 md:p-10 shadow-2xl overflow-hidden"
+          className="relative bg-card border border-border/50 rounded-3xl p-4 md:p-10 shadow-2xl overflow-hidden"
         >
           {/* Glow Effect */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3" />
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             {/* Left Column: Calendar */}
             <div className="w-full lg:w-auto flex justify-center lg:justify-start">
-              <div className="p-6 rounded-2xl bg-[#161920] border border-white/5 shadow-lg w-full max-w-sm">
+              <div className="p-3 md:p-6 rounded-2xl bg-muted/30 border border-border/50 shadow-lg w-full max-w-[320px] md:max-w-sm mx-auto lg:mx-0">
                 <Calendar
                   mode="single"
                   selected={date}
                   onSelect={setDate}
-                  className="rounded-md w-full"
+                  className="rounded-md w-full p-0"
                   classNames={{
+                    months: "flex flex-col space-y-4",
+                    month: "space-y-4 w-full",
+
+                    // HEADER
+                    caption: "flex items-center justify-between px-2",
+                    caption_label:
+                      "text-base font-semibold text-foreground flex-1 text-center",
+
+                    nav: "flex items-center gap-1",
+                    nav_button:
+                      "h-8 w-8 bg-transparent p-0 opacity-70 hover:opacity-100 hover:bg-muted rounded-md transition-colors",
+                    nav_button_previous: "",
+                    nav_button_next: "",
+
+                    // CALENDAR GRID
+                    table: "w-full border-collapse",
+                    head_row: "flex justify-between",
                     head_cell:
-                      "text-muted-foreground w-9 font-normal text-[0.8rem]",
-                    cell: "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
-                    day: "h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-white/5 rounded-md transition-colors text-gray-300",
+                      "w-9 text-center text-muted-foreground font-normal text-xs",
+
+                    row: "flex w-full justify-between mt-2",
+                    cell: "relative h-9 w-9 text-center text-sm p-0",
+
+                    day: "h-9 w-9 rounded-md hover:bg-muted transition-colors",
                     day_selected:
-                      "bg-amber-400 text-black hover:bg-amber-400 hover:text-black focus:bg-amber-400 focus:text-black font-semibold",
-                    day_today: "bg-white/5 text-amber-400 font-bold",
+                      "bg-primary text-primary-foreground hover:bg-primary",
+                    day_today: "bg-muted text-primary font-bold",
                   }}
                 />
               </div>
@@ -91,8 +111,8 @@ export function SacredSessionBooking() {
             {/* Right Column: Time Slots */}
             <div className="w-full flex-1 space-y-8">
               <div>
-                <h3 className="text-xl font-rozha text-amber-400 mb-6 flex items-center gap-2">
-                  <CalendarDays className="w-5 h-5 text-amber-400" />
+                <h3 className="text-xl font-rozha text-primary mb-6 flex items-center justify-center gap-2">
+                  <CalendarDays className="w-5 h-5 text-primary" />
                   {t.booking.availableSlots}
                 </h3>
 
@@ -104,8 +124,8 @@ export function SacredSessionBooking() {
                       className={cn(
                         "py-4 px-6 rounded-xl text-sm font-medium transition-all duration-300 border",
                         selectedTime === time
-                          ? "bg-transparent border-amber-400 text-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.3)]"
-                          : "bg-[#161920] text-gray-400 border-white/5 hover:border-white/10 hover:text-gray-200",
+                          ? "bg-transparent border-primary text-primary shadow-[0_0_15px_rgba(212,175,55,0.15)]"
+                          : "bg-muted/20 text-muted-foreground border-border/50 hover:border-primary/30 hover:text-foreground",
                       )}
                     >
                       {time}
@@ -116,7 +136,7 @@ export function SacredSessionBooking() {
 
               <Button
                 size="lg"
-                className="w-full h-14 text-base font-bold rounded-xl shadow-lg transition-all duration-300 bg-amber-400 text-black hover:bg-amber-500 hover:shadow-amber-400/20"
+                className="w-full h-14 text-base font-bold rounded-xl shadow-lg transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-primary/20"
                 disabled={!date || !selectedTime}
               >
                 <span className="flex items-center gap-2">

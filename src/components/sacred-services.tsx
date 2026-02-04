@@ -73,11 +73,11 @@ export function SacredServices() {
 
         {/* Services Grid/Slider */}
         <div className="relative w-full">
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 overflow-x-auto md:overflow-visible pb-8 md:pb-0 px-4 md:px-0 snap-x snap-mandatory scrollbar-hide">
+          <div className="flex lg:grid lg:grid-cols-4 gap-8 lg:gap-10 overflow-x-auto lg:overflow-visible pb-8 lg:pb-0 px-4 md:px-0 snap-x snap-mandatory scrollbar-hide">
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className="min-w-[280px] md:min-w-0 snap-center"
+                className="min-w-[280px] lg:min-w-0 snap-center"
               >
                 <ServiceCard
                   icon={service.icon}
