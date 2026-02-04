@@ -20,6 +20,22 @@ export const en = {
     bookConsultation: "Book Consultation",
     availableNow: "Available Now",
   },
+  zodiac: {
+    title: "The Twelve Sacred Signs",
+    subtitle: "Explore the cosmic archetypes that shape our destinies",
+    aries: "Aries",
+    taurus: "Taurus",
+    gemini: "Gemini",
+    cancer: "Cancer",
+    leo: "Leo",
+    virgo: "Virgo",
+    libra: "Libra",
+    scorpio: "Scorpio",
+    sagittarius: "Sagittarius",
+    capricorn: "Capricorn",
+    aquarius: "Aquarius",
+    pisces: "Pisces",
+  },
   sloka: {
     text: "I bow to Shiva, who is as white as camphor, the incarnation of compassion, garlanded with the serpent king. I bow to the one who resides in my heart forever with Bhavani."
   }

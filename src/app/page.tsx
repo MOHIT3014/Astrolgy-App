@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useTranslations } from "@/hooks/use-translations";
 import { useLanguage } from "@/store/use-language";
+import { ZodiacSigns } from "@/components/zodiac-signs";
 
 export default function Home() {
   const t = useTranslations();
@@ -143,6 +144,8 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
+
+      <ZodiacSigns />
     </div>
   );
 }
