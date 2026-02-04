@@ -8,6 +8,7 @@ import { useTranslations } from "@/hooks/use-translations";
 import { useLanguage } from "@/store/use-language";
 import { ZodiacSigns } from "@/components/zodiac-signs";
 import { SacredServices } from "@/components/sacred-services";
+import { SacredSessionBooking } from "@/components/sacred-session-booking";
 
 export default function Home() {
   const t = useTranslations();
@@ -148,6 +149,7 @@ export default function Home() {
 
       <ZodiacSigns />
       <SacredServices />
+      <SacredSessionBooking />
     </div>
   );
 }

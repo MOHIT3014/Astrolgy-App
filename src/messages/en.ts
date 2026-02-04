@@ -58,6 +58,13 @@ export const en = {
       description: "Comprehensive life reading covering health, wealth, career, and relationships.",
     }
   },
+  booking: {
+    title: "Schedule Your Sacred Session",
+    subtitle: "Select a date that aligns with your cosmic timing",
+    availableSlots: "Available Time Slots",
+    confirmBooking: "Confirm Booking",
+    timeSlots: ["10:00 AM", "11:30 AM", "2:00 PM", "3:30 PM", "5:00 PM", "6:30 PM"]
+  },
   sloka: {
     text: "I bow to Shiva, who is as white as camphor, the incarnation of compassion, garlanded with the serpent king. I bow to the one who resides in my heart forever with Bhavani."
   }
