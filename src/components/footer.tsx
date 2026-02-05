@@ -11,11 +11,11 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/#services" },
-    { name: "Contact Us", href: "/contact" },
-    { name: "Daily Horoscope", href: "/daily-horoscope" },
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.about, href: "/about" },
+    { name: t.nav.services, href: "/#services" },
+    { name: t.nav.contact, href: "/contact" },
+    { name: t.nav.dailyHoroscope, href: "/daily-horoscope" },
   ];
 
   const socialLinks = [
@@ -32,20 +32,21 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <h3 className="text-xl font-rozha text-primary font-bold">
-              Astrology App
+              {t.footer.title}
             </h3>
             <p className="text-muted-foreground text-sm">
-              Your daily guide to the stars. Discover your destiny with our
-              expert readings and sacred services.
+              {t.footer.description}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Quick Links</h4>
+            <h4 className="font-semibold text-foreground">
+              {t.footer.quickLinks}
+            </h4>
             <ul className="space-y-2 text-sm">
               {footerLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -59,14 +60,16 @@ export function Footer() {
 
           {/* Services (Quick Access) */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Services</h4>
+            <h4 className="font-semibold text-foreground">
+              {t.footer.services}
+            </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="#"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Kundli Matching
+                  {t.footer.kundliMatching}
                 </Link>
               </li>
               <li>
@@ -74,7 +77,7 @@ export function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Vastu Consultation
+                  {t.footer.vastuConsultation}
                 </Link>
               </li>
             </ul>
@@ -82,7 +85,9 @@ export function Footer() {
 
           {/* Newsletter/Social */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Connect With Us</h4>
+            <h4 className="font-semibold text-foreground">
+              {t.footer.connect}
+            </h4>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <Link
@@ -97,7 +102,7 @@ export function Footer() {
             </div>
             <div className="pt-2">
               <p className="text-xs text-muted-foreground">
-                Subscribe to our newsletter for daily updates.
+                {t.footer.subscribe}
               </p>
               {/* Placeholder for newsletter input if needed later */}
             </div>
@@ -105,7 +110,9 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Astrology App. All rights reserved.</p>
+          <p>
+            &copy; {currentYear} {t.footer.rights}
+          </p>
         </div>
       </div>
     </footer>

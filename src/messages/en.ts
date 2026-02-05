@@ -113,5 +113,16 @@ export const en = {
   },
   sloka: {
     text: "I bow to Shiva, who is as white as camphor, the incarnation of compassion, garlanded with the serpent king. I bow to the one who resides in my heart forever with Bhavani."
+  },
+  footer: {
+    title: "Astrology App",
+    description: "Your daily guide to the stars. Discover your destiny with our expert readings and sacred services.",
+    quickLinks: "Quick Links",
+    services: "Services",
+    kundliMatching: "Kundli Matching",
+    vastuConsultation: "Vastu Consultation",
+    connect: "Connect With Us",
+    subscribe: "Subscribe to our newsletter for daily updates.",
+    rights: "Astrology App. All rights reserved."
   }
 };
