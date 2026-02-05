@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { useLanguage } from "@/store/use-language";
 import { useTranslations } from "@/hooks/use-translations";
 
@@ -32,6 +33,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
       </div>
       <Navbar />
       <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 }

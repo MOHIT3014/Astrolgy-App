@@ -1,0 +1,113 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { useTranslations } from "@/hooks/use-translations";
+
+export function Footer() {
+  const t = useTranslations();
+
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/#services" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Daily Horoscope", href: "/daily-horoscope" },
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+  ];
+
+  return (
+    <footer className="w-full bg-background border-t border-border mt-auto">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Brand Column */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-rozha text-primary font-bold">
+              Astrology App
+            </h3>
+            <p className="text-muted-foreground text-sm">
+              Your daily guide to the stars. Discover your destiny with our
+              expert readings and sacred services.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-foreground">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              {footerLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services (Quick Access) */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-foreground">Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Kundli Matching
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Vastu Consultation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter/Social */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-foreground">Connect With Us</h4>
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  className="p-2 rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  aria-label={social.label}
+                >
+                  <social.icon size={18} />
+                </Link>
+              ))}
+            </div>
+            <div className="pt-2">
+              <p className="text-xs text-muted-foreground">
+                Subscribe to our newsletter for daily updates.
+              </p>
+              {/* Placeholder for newsletter input if needed later */}
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+          <p>&copy; {currentYear} Astrology App. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
