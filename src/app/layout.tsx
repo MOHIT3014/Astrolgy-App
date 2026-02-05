@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rozha_One } from "next/font/google";
 import "./globals.css";
-import "./globals.css";
+
 // import { Navbar } from "@/components/navbar"; // Removing direct import
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,14 +39,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${rozhaOne.variable} antialiased h-full w-full`}
       >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-            <LayoutWrapper>
-                {children}
-            </LayoutWrapper>
+          <LayoutWrapper>{children}</LayoutWrapper>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

@@ -87,6 +87,30 @@ export const en = {
       },
     ],
   },
+  contact: {
+    title: "Contact Us",
+    subtitle: "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    firstName: "First Name",
+    lastName: "Last Name",
+    email: "Email",
+    message: "Message",
+    send: "Send Message",
+    success: "Message sent successfully!",
+    error: "Something went wrong.",
+    infoTitle: "Get in Touch",
+    infoSubtitle: "Reach out to us through any of these channels.",
+    location: "Location",
+    phone: "Phone",
+    heroTitle: "Let's Connect",
+    heroDescription: "Have questions about your horoscope, birth chart, or our services? We are here to help you navigate your cosmic journey.",
+    emailLabel: "Email",
+    validation: {
+      firstNameMin: "First name must be at least 2 characters.",
+      lastNameMin: "Last name must be at least 2 characters.",
+      emailInvalid: "Please enter a valid email address.",
+      messageMin: "Message must be at least 30 characters."
+    }
+  },
   sloka: {
     text: "I bow to Shiva, who is as white as camphor, the incarnation of compassion, garlanded with the serpent king. I bow to the one who resides in my heart forever with Bhavani."
   }

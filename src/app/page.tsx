@@ -10,6 +10,7 @@ import { ZodiacSigns } from "@/components/zodiac-signs";
 import { SacredServices } from "@/components/sacred-services";
 import { SacredSessionBooking } from "@/components/sacred-session-booking";
 import { Testimonials } from "@/components/testimonials";
+import { ContactForm } from "@/components/contact-form";
 
 export default function Home() {
   const t = useTranslations();
@@ -152,6 +153,9 @@ export default function Home() {
       <SacredServices />
       <SacredSessionBooking />
       <Testimonials />
+      <div className="pb-5 mb:pb-15">
+        <ContactForm />
+      </div>
     </div>
   );
 }
