@@ -11,6 +11,9 @@ import {
   LucideIcon,
   Sparkles,
   Calendar,
+  User,
+  Phone,
+  Home,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -42,24 +45,29 @@ export function Navbar() {
 
   const navItems = [
     {
+      title: t.nav.home,
+      href: "/",
+      icon: Home,
+    },
+    {
+      title: t.nav.about,
+      href: "/about",
+      icon: User,
+    },
+    {
+      title: t.nav.services,
+      href: "/#services",
+      icon: Sparkles,
+    },
+    {
+      title: t.nav.contact,
+      href: "/contact",
+      icon: Phone,
+    },
+    {
       title: t.nav.dailyHoroscope,
       href: "/horoscope",
       icon: Sun,
-    },
-    {
-      title: t.nav.birthChart,
-      href: "/birth-chart",
-      icon: ScrollText,
-    },
-    {
-      title: t.nav.compatibility,
-      href: "/compatibility",
-      icon: Heart,
-    },
-    {
-      title: t.nav.learn,
-      href: "/learn",
-      icon: BookOpen,
     },
   ];
 

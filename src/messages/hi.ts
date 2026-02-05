@@ -9,6 +9,10 @@ export const hi = {
     switchTheme: "थीम बदलें",
     toggleMenu: "मेनू खोलें",
     navigationMenu: "नेविगेशन मेनू",
+    about: "परिचय",
+    services: "सेवाएं",
+    contact: "संपर्क करें",
+    home: "होम",
   },
   home: {
     name: "पंडित अजय शास्त्री",

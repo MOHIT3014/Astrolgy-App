@@ -9,6 +9,10 @@ export const en = {
     switchTheme: "Switch Theme",
     toggleMenu: "Toggle Menu",
     navigationMenu: "Navigation Menu",
+    about: "About",
+    services: "Services",
+    contact: "Contact Us",
+    home: "Home",
   },
   home: {
     name: "Pandit Ajay Shastri",
