@@ -14,6 +14,12 @@ export const en = {
     contact: "Contact Us",
     home: "Home",
   },
+  about: {
+    heroTitle: "About Pandit Ajay Shastri",
+    heroSubtitle: "A journey of spiritual mastery rooted in ancient Vedic traditions",
+    legacyTitle: "A Sacred Legacy",
+    legacyDescription: "Born into a lineage of revered astrologers and Vedic scholars, my journey into the mystical world of Jyotish began at the tender age of seven. Under the guidance of my grandfather, a renowned temple priest and astrologer, I learned to read the movement of celestial bodies and understand their profound influence on human life."
+  },
   home: {
     name: "Pandit Ajay Shastri",
     title: "Vedic Astrologer & Vastu Consultant",
