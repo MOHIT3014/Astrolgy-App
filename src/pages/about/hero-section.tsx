@@ -19,7 +19,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 max-w-4xl mx-auto space-y-4"
       >
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-rozha-one">
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tight font-rozha-one">
           {t.about.heroTitle.split(" ").map((word, index) => {
             const isHighlight =
               word.includes("पंडित") || word.includes("Pandit");

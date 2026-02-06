@@ -24,7 +24,10 @@ export const hi = {
       years: "आध्यात्मिक साधना के वर्ष",
       clients: "संतुष्ट ग्राहक",
       poojas: "पूजा अनुष्ठान",
-      marriages: "सफल विवाह"
+      marriages: "सफल विवाह",
+      varshfal: "वर्षफल विश्लेषण",
+      kundali: "कुंडली बनाई गई",
+      janampatri: "जन्मपत्री विश्लेषण"
     }
   },
   home: {

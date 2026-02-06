@@ -24,7 +24,10 @@ export const en = {
       years: "Years of Spiritual Practice",
       clients: "Happy Clients",
       poojas: "Poojas Performed",
-      marriages: "Successful Marriages"
+      marriages: "Successful Marriages",
+      varshfal: "Varshfal Analysis",
+      kundali: "Kundali Made",
+      janampatri: "Janampatri Analysis"
     }
   },
   home: {

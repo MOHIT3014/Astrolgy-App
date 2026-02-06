@@ -2,7 +2,15 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "@/hooks/use-translations";
-import { Award, Users, BookOpen, HeartHandshake } from "lucide-react";
+import {
+  Award,
+  Users,
+  BookOpen,
+  HeartHandshake,
+  ScrollText,
+  Star,
+  FileText,
+} from "lucide-react";
 
 export function MilestonesSection() {
   const t = useTranslations();
@@ -32,6 +40,24 @@ export function MilestonesSection() {
       value: "100+",
       label: t.about.milestones.marriages,
     },
+    {
+      id: 5,
+      icon: ScrollText,
+      value: "5000+",
+      label: t.about.milestones.varshfal,
+    },
+    {
+      id: 6,
+      icon: Star,
+      value: "3000+",
+      label: t.about.milestones.kundali,
+    },
+    {
+      id: 7,
+      icon: FileText,
+      value: "1500+",
+      label: t.about.milestones.janampatri,
+    },
   ];
 
   return (
@@ -47,7 +73,7 @@ export function MilestonesSection() {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-8 max-w-7xl mx-auto">
         {milestones.map((item, index) => (
           <motion.div
             key={item.id}
@@ -55,7 +81,7 @@ export function MilestonesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group relative flex flex-col items-center justify-center p-6 md:p-8 rounded-3xl bg-card/30 border border-primary/10 hover:border-primary/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 text-center"
+            className="group relative flex flex-col items-center justify-center p-6 md:p-8 rounded-3xl bg-card/30 border border-primary/10 hover:border-primary/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 text-center w-[calc(50%-8px)] lg:w-[calc(25%-24px)]"
           >
             {/* Icon */}
             <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mb-4 rounded-2xl bg-linear-to-br from-primary/20 to-primary/5 text-primary group-hover:scale-110 transition-transform duration-300">
